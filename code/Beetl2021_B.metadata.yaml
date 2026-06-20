@@ -1,0 +1,218 @@
+_dataset:
+  class: Beetl2021_B
+  code: Beetl2021-B
+  doi: null
+  interval:
+  - 0
+  - 4
+  n_subjects: 2
+  paradigm: imagery
+abstract: 'Transfer learning and meta-learning offer some of the most promising avenues to unlock the scalability of healthcare
+  and consumer technologies driven by biosignal data. This is because current methods cannot generalise well across human
+  subjects'' data and handle learning from different heterogeneously collected data sets, thus limiting the scale of training
+  data. Task 2 is a 3-way motor imagery classification challenge (left-hand, right-hand motor imagery and ''reject'') that
+  gets at the heart of the problem of current BCI systems: motor imagery data is exhausting for subjects to record, and historically
+  has been difficult to use in a cross-subject and cross-dataset manner. Dataset B contains data from the Weibo2014 dataset
+  with 32 channels around the motor cortex selected, sampled at 200 Hz.'
+acquisition:
+  channel_types:
+    eeg: 32
+  filters: Bandpass filter (1-100 Hz)
+  line_freq: 50.0
+  montage: standard_1005
+  n_channels: 32
+  sampling_rate: 200.0
+  sensor_type: EEG
+  sensors:
+  - Fp1
+  - Fp2
+  - F3
+  - Fz
+  - F4
+  - FC5
+  - FC1
+  - FC2
+  - FC6
+  - C5
+  - C3
+  - C1
+  - Cz
+  - C2
+  - C4
+  - C6
+  - CP5
+  - CP3
+  - CP1
+  - CPz
+  - CP2
+  - CP4
+  - CP6
+  - P7
+  - P5
+  - P3
+  - P1
+  - Pz
+  - P2
+  - P4
+  - P6
+  - P8
+bci_application:
+  applications:
+  - motor_control
+  - transfer_learning
+  environment: laboratory
+cross_validation:
+  cv_folds: 5
+  cv_method: block-wise cross-validation
+  evaluation_type:
+  - cross-subject
+  - cross-dataset
+data_processed: true
+data_structure:
+  trials_context: Training and testing data separated. Competition data cut into 4-second trials. Training has 5 races, testing
+    has 10 races per subject.
+documentation:
+  associated_paper_doi: 10.48550/arXiv.2202.12950
+  country: GB
+  data_url: https://beetl.ai/data
+  description: 'Motor Imagery dataset from BEETL Competition - Dataset B. Part of the NeurIPS 2021 BEETL competition Task
+    2 focusing on transfer learning for motor imagery decoding. Dataset B contains data from Weibo2014 with 32 EEG channels
+    selected around the motor cortex, sampled at 200 Hz. 4-class motor imagery: left hand, right hand, feet, and rest.'
+  funding:
+  - UKRI Turing AI Fellowship Grant (EP/V025449/1)
+  - ANR BrAIN AI chair (ANR-20-CHIA-0016)
+  - CEA NUMERICS program
+  - European Union Horizon 2020 Marie Sklodowska-Curie grant No 800945
+  - Facebook Reality Labs
+  - BCI Society
+  institution: Imperial College London
+  institution_address: Brain & Behaviour Lab, Imperial College London, United Kingdom
+  institution_department: Brain & Behaviour Lab
+  investigators:
+  - Xiaoxi Wei
+  - A. Aldo Faisal
+  - Moritz Grosse-Wentrup
+  - Alexandre Gramfort
+  - Sylvain Chevallier
+  - Vinay Jayaram
+  - Camille Jeunet
+  - Stylianos Bakas
+  - Siegfried Ludwig
+  - Konstantinos Barmpas
+  - Mehdi Bahri
+  - Yannis Panagakis
+  - Nikolaos Laskaris
+  - Dimitrios A. Adamos
+  - Stefanos Zafeiriou
+  - William C. Duong
+  - Stephen M. Gordon
+  - Vernon J. Lawhern
+  - Maciej Śliwowski
+  - Vincent Rouanne
+  - Piotr Tempczyk
+  keywords:
+  - machine learning
+  - transfer learning
+  - domain adaptation
+  - Brain-Computer-Interfaces (BCI)
+  - EEG
+  - neuroscience
+  - motor imagery
+  - cross-dataset
+  - NeurIPS2021
+  license: CC-BY-4.0
+  publication_year: 2022
+  repository: beetl.ai
+  senior_author: A. Aldo Faisal
+experiment:
+  class_labels:
+  - left_hand
+  - right_hand
+  - feet
+  - rest
+  events:
+    feet: 2
+    left_hand: 0
+    rest: 3
+    right_hand: 1
+  has_training_test_split: true
+  mode: offline
+  n_classes: 4
+  paradigm: imagery
+  study_design: cross-dataset transfer learning
+  study_domain: Brain-Computer Interface
+  synchronicity: synchronous
+  task_type: motor imagery
+  trial_duration: 4.0
+external_links:
+  competition_page: https://beetl.ai/introduction
+  github: https://github.com/NeuroTechX/moabb
+  moabb: http://moabb.neurotechx.com/docs/datasets.html
+  source: https://beetl.ai/challenge
+file_format: numpy
+methodology: Task 2 is centred on transfer learning for BCI, addressing motor imagery decoding. The challenge lies in transferring
+  from multiple data sets, which use different EEG setups comprising hundreds of users, to a set of new users that need to
+  be up and running with only minutes worth of calibration data (transfer across subjects and data sets). Three source data
+  sets (Cho2017, BNCI2014, PhysionetMI) are provided as training data. The algorithms are evaluated on new data sets with
+  different setups, including differences in electrode channels, task definitions, and subjects. Dataset B is from Weibo2014
+  with 32 channels selected around motor cortex. For the leaderboard phase (subjects 3-5), only training data is provided.
+  For the final phase (subjects 4-5), both training and testing data are included.
+paradigm_specific:
+  detected_paradigm: motor_imagery
+  imagery_duration_s: 4.0
+  imagery_tasks:
+  - left_hand
+  - right_hand
+  - feet
+  - rest
+participants:
+  health_status: healthy
+  n_subjects: 2
+  species: human
+performance:
+  accuracy_percent: 76.33
+  balanced_accuracy_baseline: 49.9
+  balanced_accuracy_cogitat: 76.33
+  balanced_accuracy_ms01: 59.87
+  balanced_accuracy_wduong: 71.33
+preprocessing:
+  data_state: preprocessed
+  filter_type: frequency-domain
+  highpass_hz: 1.0
+  lowpass_hz: 100.0
+  notes: Data from Weibo2014 dataset with 32 channels selected around motor cortex. Filtered with bandpass 1-100 Hz. Cut into
+    4-second trials for the competition.
+  preprocessing_applied: true
+  preprocessing_steps:
+  - Bandpass filtering (1-100 Hz)
+  - Channel selection (32 channels from Weibo2014)
+runs_per_session: 2
+sessions:
+- '0'
+sessions_per_subject: 1
+signal_processing:
+  classifiers:
+  - EEGNet
+  - EEGInception
+  - DeepSleep
+  - Shallow ConvNet
+  - SPDNet
+  - Deep Sets
+  - MDRM
+  feature_extraction:
+  - Deep learning features
+  - Covariance matrices
+  - Riemannian geometry
+  spatial_filters:
+  - Euclidean Alignment
+  - Label Alignment
+  - Deep Set alignment
+  - Statistical alignment
+  - Maximum Classifier Discrepancy
+tags:
+  modality:
+  - Motor
+  pathology:
+  - Healthy
+  type:
+  - Research

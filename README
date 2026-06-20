@@ -1,0 +1,173 @@
+Beetl2021-B
+===========
+
+Motor Imagery dataset from BEETL Competition - Dataset B.
+
+Dataset Overview
+----------------
+  Code: Beetl2021-B
+  Paradigm: imagery
+  Subjects: 2
+  Sessions per subject: 1
+  Events: left_hand=0, right_hand=1, feet=2, rest=3
+  Trial interval: [0, 4] s
+  Runs per session: 2
+  Session IDs: 0
+  File format: numpy
+  Data preprocessed: True
+
+Acquisition
+-----------
+  Sampling rate: 200.0 Hz
+  Number of channels: 32
+  Channel types: eeg=32
+  Channel names: Fp1, Fp2, F3, Fz, F4, FC5, FC1, FC2, FC6, C5, C3, C1, Cz, C2, C4, C6, CP5, CP3, CP1, CPz, CP2, CP4, CP6, P7, P5, P3, P1, Pz, P2, P4, P6, P8
+  Montage: standard_1005
+  Sensor type: EEG
+  Line frequency: 50.0 Hz
+  Online filters: Bandpass filter (1-100 Hz)
+
+Participants
+------------
+  Number of subjects: 2
+  Health status: healthy
+  Species: human
+
+Experimental Protocol
+---------------------
+  Paradigm: imagery
+  Task type: motor imagery
+  Number of classes: 4
+  Class labels: left_hand, right_hand, feet, rest
+  Trial duration: 4.0 s
+  Study design: cross-dataset transfer learning
+  Study domain: Brain-Computer Interface
+  Synchronicity: synchronous
+  Mode: offline
+  Training/test split: True
+
+HED Event Annotations
+---------------------
+  Schema: HED 8.4.0 | Browse: https://www.hedtags.org/hed-schema-browser
+
+  left_hand
+    ├─ Sensory-event, Experimental-stimulus, Visual-presentation
+    └─ Agent-action
+       └─ Imagine
+          ├─ Move
+          └─ Left, Hand
+
+  right_hand
+    ├─ Sensory-event, Experimental-stimulus, Visual-presentation
+    └─ Agent-action
+       └─ Imagine
+          ├─ Move
+          └─ Right, Hand
+
+  feet
+    ├─ Sensory-event, Experimental-stimulus, Visual-presentation
+    └─ Agent-action
+       └─ Imagine, Move, Foot
+
+  rest
+    ├─ Sensory-event
+    ├─ Experimental-stimulus
+    ├─ Visual-presentation
+    └─ Rest
+
+Paradigm-Specific Parameters
+----------------------------
+  Detected paradigm: motor_imagery
+  Imagery tasks: left_hand, right_hand, feet, rest
+  Imagery duration: 4.0 s
+
+Data Structure
+--------------
+  Trials context: Training and testing data separated. Competition data cut into 4-second trials. Training has 5 races, testing has 10 races per subject.
+
+Preprocessing
+-------------
+  Data state: preprocessed
+  Preprocessing applied: True
+  Steps: Bandpass filtering (1-100 Hz), Channel selection (32 channels from Weibo2014)
+  Highpass filter: 1.0 Hz
+  Lowpass filter: 100.0 Hz
+  Filter type: frequency-domain
+  Notes: Data from Weibo2014 dataset with 32 channels selected around motor cortex. Filtered with bandpass 1-100 Hz. Cut into 4-second trials for the competition.
+
+Signal Processing
+-----------------
+  Classifiers: EEGNet, EEGInception, DeepSleep, Shallow ConvNet, SPDNet, Deep Sets, MDRM
+  Feature extraction: Deep learning features, Covariance matrices, Riemannian geometry
+  Spatial filters: Euclidean Alignment, Label Alignment, Deep Set alignment, Statistical alignment, Maximum Classifier Discrepancy
+
+Cross-Validation
+----------------
+  Method: block-wise cross-validation
+  Folds: 5
+  Evaluation type: cross-subject, cross-dataset
+
+Performance (Original Study)
+----------------------------
+  Accuracy: 76.33%
+  Balanced Accuracy Cogitat: 76.33
+  Balanced Accuracy Wduong: 71.33
+  Balanced Accuracy Ms01: 59.87
+  Balanced Accuracy Baseline: 49.9
+
+BCI Application
+---------------
+  Applications: motor_control, transfer_learning
+  Environment: laboratory
+  Online feedback: False
+
+Tags
+----
+  Pathology: Healthy
+  Modality: Motor
+  Type: Research
+
+Documentation
+-------------
+  Description: Motor Imagery dataset from BEETL Competition - Dataset B. Part of the NeurIPS 2021 BEETL competition Task 2 focusing on transfer learning for motor imagery decoding. Dataset B contains data from Weibo2014 with 32 EEG channels selected around the motor cortex, sampled at 200 Hz. 4-class motor imagery: left hand, right hand, feet, and rest.
+  Associated paper DOI: 10.48550/arXiv.2202.12950
+  License: CC-BY-4.0
+  Investigators: Xiaoxi Wei, A. Aldo Faisal, Moritz Grosse-Wentrup, Alexandre Gramfort, Sylvain Chevallier, Vinay Jayaram, Camille Jeunet, Stylianos Bakas, Siegfried Ludwig, Konstantinos Barmpas, Mehdi Bahri, Yannis Panagakis, Nikolaos Laskaris, Dimitrios A. Adamos, Stefanos Zafeiriou, William C. Duong, Stephen M. Gordon, Vernon J. Lawhern, Maciej Śliwowski, Vincent Rouanne, Piotr Tempczyk
+  Senior author: A. Aldo Faisal
+  Institution: Imperial College London
+  Department: Brain & Behaviour Lab
+  Address: Brain & Behaviour Lab, Imperial College London, United Kingdom
+  Country: GB
+  Repository: beetl.ai
+  Data URL: https://beetl.ai/data
+  Publication year: 2022
+  Funding: UKRI Turing AI Fellowship Grant (EP/V025449/1); ANR BrAIN AI chair (ANR-20-CHIA-0016); CEA NUMERICS program; European Union Horizon 2020 Marie Sklodowska-Curie grant No 800945; Facebook Reality Labs; BCI Society
+  Keywords: machine learning, transfer learning, domain adaptation, Brain-Computer-Interfaces (BCI), EEG, neuroscience, motor imagery, cross-dataset, NeurIPS2021
+
+External Links
+--------------
+  Source: https://beetl.ai/challenge
+  Competition Page: https://beetl.ai/introduction
+  Moabb: http://moabb.neurotechx.com/docs/datasets.html
+  Github: https://github.com/NeuroTechX/moabb
+
+Abstract
+--------
+Transfer learning and meta-learning offer some of the most promising avenues to unlock the scalability of healthcare and consumer technologies driven by biosignal data. This is because current methods cannot generalise well across human subjects' data and handle learning from different heterogeneously collected data sets, thus limiting the scale of training data. Task 2 is a 3-way motor imagery classification challenge (left-hand, right-hand motor imagery and 'reject') that gets at the heart of the problem of current BCI systems: motor imagery data is exhausting for subjects to record, and historically has been difficult to use in a cross-subject and cross-dataset manner. Dataset B contains data from the Weibo2014 dataset with 32 channels around the motor cortex selected, sampled at 200 Hz.
+
+Methodology
+-----------
+Task 2 is centred on transfer learning for BCI, addressing motor imagery decoding. The challenge lies in transferring from multiple data sets, which use different EEG setups comprising hundreds of users, to a set of new users that need to be up and running with only minutes worth of calibration data (transfer across subjects and data sets). Three source data sets (Cho2017, BNCI2014, PhysionetMI) are provided as training data. The algorithms are evaluated on new data sets with different setups, including differences in electrode channels, task definitions, and subjects. Dataset B is from Weibo2014 with 32 channels selected around motor cortex. For the leaderboard phase (subjects 3-5), only training data is provided. For the final phase (subjects 4-5), both training and testing data are included.
+
+References
+----------
+Wei, X., Faisal, A. A., Grosse-Wentrup, M., Gramfort, A., Chevallier, S., Jayaram, V., ... & Tempczyk, P. (2022, July). 2021 BEETL competition: Advancing transfer learning for subject independence and heterogeneous EEG data sets. In NeurIPS 2021 Competitions and Demonstrations Track (pp. 205-219). PMLR.
+
+Competition: https://beetl.ai/introduction
+Appelhoff, S., Sanderson, M., Brooks, T., Vliet, M., Quentin, R., Holdgraf, C., Chaumon, M., Mikulan, E., Tavabi, K., Hochenberger, R., Welke, D., Brunner, C., Rockhill, A., Larson, E., Gramfort, A. and Jas, M. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. Journal of Open Source Software 4: (1896). https://doi.org/10.21105/joss.01896
+
+Pernet, C. R., Appelhoff, S., Gorgolewski, K. J., Flandin, G., Phillips, C., Delorme, A., Oostenveld, R. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. Scientific Data, 6, 103. https://doi.org/10.1038/s41597-019-0104-8
+
+---
+Generated by MOABB 1.5.0dev0 (Mother of All BCI Benchmarks)
+https://github.com/NeuroTechX/moabb
