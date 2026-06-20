@@ -1,0 +1,118 @@
+{
+  "version": "2.0",
+  "pipeline_stage": "validated",
+  "authors": {
+    "Xiaoxi Wei": {},
+    "A. Aldo Faisal": {},
+    "Moritz Grosse-Wentrup": {},
+    "Alexandre Gramfort": {},
+    "Sylvain Chevallier": {},
+    "Vinay Jayaram": {},
+    "Camille Jeunet": {},
+    "Stylianos Bakas": {},
+    "Siegfried Ludwig": {},
+    "Konstantinos Barmpas": {},
+    "Mehdi Bahri": {},
+    "Yannis Panagakis": {},
+    "Nikolaos Laskaris": {},
+    "Dimitrios A. Adamos": {},
+    "Stefanos Zafeiriou": {},
+    "William C. Duong": {},
+    "Stephen M. Gordon": {},
+    "Vernon J. Lawhern": {},
+    "Maciej Śliwowski": {},
+    "Vincent Rouanne": {},
+    "Piotr Tempczyk": {}
+  },
+  "related_identifiers": [
+    {
+      "identifier": "10.48550/arXiv.2202.12950",
+      "identifier_type": "DOI",
+      "relation_type": "References"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/nm000274",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataexplorer/detail?dataset_id=nm000274",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    }
+  ],
+  "funding_references": [
+    {
+      "funder_name": "CEA NUMERICS program"
+    },
+    {
+      "funder_name": "Facebook Reality Labs"
+    },
+    {
+      "funder_name": "BCI Society"
+    },
+    {
+      "funder_name": "UKRI",
+      "award_number": "EP/V025449/1",
+      "award_title": "Turing AI Fellowship Grant"
+    },
+    {
+      "funder_name": "ANR",
+      "award_number": "ANR-20-CHIA-0016",
+      "award_title": "BrAIN AI chair"
+    },
+    {
+      "funder_name": "CEA",
+      "award_title": "NUMERICS program"
+    },
+    {
+      "funder_name": "European Union",
+      "award_number": "800945",
+      "award_title": "Horizon 2020 Marie Sklodowska-Curie grant"
+    }
+  ],
+  "title": "Beetl2021-B",
+  "license": "CC-BY-4.0",
+  "dataset_type": "derivative",
+  "resource_type_general": "Dataset",
+  "modalities": [
+    "eeg"
+  ],
+  "resource_type_specific": "EEG Dataset",
+  "sizes": [
+    "32.9 MB (5 files)"
+  ],
+  "formats": [
+    ".edf",
+    ".json",
+    ".tsv",
+    ".yaml",
+    ".yml"
+  ],
+  "description": "Beetl2021-B is a preprocessed EEG dataset from the NeurIPS 2021 BEETL competition focused on transfer learning for motor imagery decoding. The dataset contains 32-channel EEG recordings from 2 healthy subjects performing 4-class motor imagery tasks (left hand, right hand, feet, and rest) sampled at 200 Hz. Designed to address the critical challenge of cross-subject and cross-dataset generalization in brain-computer interfaces, this dataset supports benchmarking of transfer learning and domain adaptation algorithms for motor imagery classification.",
+  "methods_description": "EEG data acquired at 200 Hz sampling rate using 32 channels positioned around the motor cortex (standard 1005 montage). Online bandpass filtering (1-100 Hz) applied during acquisition. Data preprocessed with frequency-domain bandpass filtering (1-100 Hz) and organized into 4-second trials. Motor imagery paradigm with visual cues for four classes: left hand, right hand, feet, and rest. Block-wise 5-fold cross-validation employed for evaluation with cross-subject and cross-dataset assessment.",
+  "keywords": [
+    {
+      "term": "EEG"
+    },
+    {
+      "term": "motor imagery"
+    },
+    {
+      "term": "brain-computer interfaces"
+    },
+    {
+      "term": "transfer learning"
+    },
+    {
+      "term": "domain adaptation"
+    },
+    {
+      "term": "deep learning"
+    },
+    {
+      "term": "cross-dataset generalization"
+    }
+  ],
+  "source_hash": "dfb19c5df0ebe5bd44657684007d01916f1d4b1a329506c2ef334befe9d72712"
+}
