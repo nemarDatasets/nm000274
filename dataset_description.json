@@ -1,68 +1,69 @@
 {
-    "Name": "Beetl2021-B",
-    "BIDSVersion": "1.9.0",
-    "HEDVersion": "8.4.0",
-    "DatasetType": "derivative",
-    "License": "CC-BY-4.0",
-    "Authors": [
-        "Xiaoxi Wei",
-        "A. Aldo Faisal",
-        "Moritz Grosse-Wentrup",
-        "Alexandre Gramfort",
-        "Sylvain Chevallier",
-        "Vinay Jayaram",
-        "Camille Jeunet",
-        "Stylianos Bakas",
-        "Siegfried Ludwig",
-        "Konstantinos Barmpas",
-        "Mehdi Bahri",
-        "Yannis Panagakis",
-        "Nikolaos Laskaris",
-        "Dimitrios A. Adamos",
-        "Stefanos Zafeiriou",
-        "William C. Duong",
-        "Stephen M. Gordon",
-        "Vernon J. Lawhern",
-        "Maciej Śliwowski",
-        "Vincent Rouanne",
-        "Piotr Tempczyk"
-    ],
-    "Funding": [
-        "UKRI Turing AI Fellowship Grant (EP/V025449/1)",
-        "ANR BrAIN AI chair (ANR-20-CHIA-0016)",
-        "CEA NUMERICS program",
-        "European Union Horizon 2020 Marie Sklodowska-Curie grant No 800945",
-        "Facebook Reality Labs",
-        "BCI Society"
-    ],
-    "ReferencesAndLinks": [
-        "https://beetl.ai/data",
-        "10.48550/arXiv.2202.12950"
-    ],
-    "Keywords": [
-        "machine learning",
-        "transfer learning",
-        "domain adaptation",
-        "Brain-Computer-Interfaces (BCI)",
-        "EEG",
-        "neuroscience",
-        "motor imagery",
-        "cross-dataset",
-        "NeurIPS2021"
-    ],
-    "GeneratedBy": [
-        {
-            "CodeURL": "https://github.com/NeuroTechX/moabb",
-            "Name": "moabb",
-            "Description": "Mother of All BCI Benchmarks",
-            "Version": "1.5.0dev0"
-        }
-    ],
-    "SourceDatasets": [
-        {
-            "DOI": "n/a",
-            "URL": "https://beetl.ai/data"
-        }
-    ],
-    "PublicationYear": 2022
+  "Name": "BEETL Competition 2021 Motor Imagery Dataset B — transfer learning benchmark",
+  "BIDSVersion": "1.9.0",
+  "HEDVersion": "8.4.0",
+  "DatasetType": "derivative",
+  "License": "CC-BY-4.0",
+  "Authors": [
+    "Xiaoxi Wei",
+    "A. Aldo Faisal",
+    "Moritz Grosse-Wentrup",
+    "Alexandre Gramfort",
+    "Sylvain Chevallier",
+    "Vinay Jayaram",
+    "Camille Jeunet",
+    "Stylianos Bakas",
+    "Siegfried Ludwig",
+    "Konstantinos Barmpas",
+    "Mehdi Bahri",
+    "Yannis Panagakis",
+    "Nikolaos Laskaris",
+    "Dimitrios A. Adamos",
+    "Stefanos Zafeiriou",
+    "William C. Duong",
+    "Stephen M. Gordon",
+    "Vernon J. Lawhern",
+    "Maciej Śliwowski",
+    "Vincent Rouanne",
+    "Piotr Tempczyk"
+  ],
+  "Funding": [
+    "UKRI Turing AI Fellowship Grant (EP/V025449/1)",
+    "ANR BrAIN AI chair (ANR-20-CHIA-0016)",
+    "CEA NUMERICS program",
+    "European Union Horizon 2020 Marie Sklodowska-Curie grant No 800945",
+    "Facebook Reality Labs",
+    "BCI Society"
+  ],
+  "ReferencesAndLinks": [
+    "https://beetl.ai/data",
+    "10.48550/arXiv.2202.12950"
+  ],
+  "Keywords": [
+    "machine learning",
+    "transfer learning",
+    "domain adaptation",
+    "Brain-Computer-Interfaces (BCI)",
+    "EEG",
+    "neuroscience",
+    "motor imagery",
+    "cross-dataset",
+    "NeurIPS2021"
+  ],
+  "GeneratedBy": [
+    {
+      "CodeURL": "https://github.com/NeuroTechX/moabb",
+      "Name": "moabb",
+      "Description": "Mother of All BCI Benchmarks",
+      "Version": "1.5.0dev0"
+    }
+  ],
+  "SourceDatasets": [
+    {
+      "DOI": "n/a",
+      "URL": "https://beetl.ai/data"
+    }
+  ],
+  "PublicationYear": 2022,
+  "Version": "1.0.1"
 }
