@@ -1,3 +1,5 @@
+[![DOI](https://img.shields.io/badge/DOI-10.82901%2Fnemar.nm000274-blue)](https://doi.org/10.82901/nemar.nm000274)
+
 # BEETL Competition 2021 Motor Imagery Dataset B — transfer learning benchmark
 
 ## Overview
