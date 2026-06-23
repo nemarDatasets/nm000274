@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "BEETL Competition 2021 Motor Imagery Dataset B — transfer learning benchmark",
-  "description": "This dataset comprises preprocessed EEG recordings from 2 healthy subjects performing 4-class motor imagery tasks (left hand, right hand, feet, and rest) as part of the BEETL 2021 Competition Task 2. Recorded at 200 Hz with 32 channels selected around the motor cortex, the dataset serves as a transfer learning benchmark for evaluating cross-subject and cross-dataset generalization in brain-computer interface applications. The data has been bandpass filtered (1-100 Hz) and segmented into 4-second trials to facilitate machine learning model development and evaluation.",
-  "methods_description": "EEG data were acquired at 200 Hz sampling rate using 32 channels positioned around the motor cortex according to the standard 1005 montage. Online bandpass filtering (1-100 Hz) was applied during acquisition with a 50 Hz line frequency. Data were preprocessed offline with frequency-domain bandpass filtering (1-100 Hz) and segmented into 4-second trials corresponding to motor imagery events. Subjects performed imagery tasks in a synchronous, offline paradigm with visual cues indicating the imagery class (left hand, right hand, feet, or rest).",
+  "description": "Beetl2021-B is a preprocessed 32-channel EEG dataset from the NeurIPS 2021 BEETL competition designed for benchmarking transfer learning and domain adaptation algorithms in motor imagery brain-computer interfaces. The dataset comprises EEG recordings from 2 healthy subjects performing 4-class motor imagery tasks (left hand, right hand, feet, and rest) sampled at 200 Hz, with 1590 total trials organized for cross-subject and cross-dataset generalization assessment.",
+  "methods_description": "EEG data acquired at 200 Hz sampling rate using 32 channels positioned according to the standard 1005 montage around the motor cortex. Online bandpass filtering (1-100 Hz) was applied during acquisition. Data were preprocessed with frequency-domain bandpass filtering (1-100 Hz) and organized into 4-second trials. Motor imagery paradigm employed visual cues for four classes. Block-wise 5-fold cross-validation was used for evaluation with cross-subject and cross-dataset assessment.",
   "license": "CC-BY-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -46,10 +46,16 @@
       "term": "domain adaptation"
     },
     {
+      "term": "cross-dataset generalization"
+    },
+    {
       "term": "machine learning"
     },
     {
-      "term": "cross-dataset generalization"
+      "term": "NeurIPS2021"
+    },
+    {
+      "term": "neuroscience"
     }
   ],
   "related_identifiers": [
@@ -90,13 +96,13 @@
       "award_title": "BrAIN AI chair"
     },
     {
-      "funder_name": "CEA",
-      "award_title": "NUMERICS program"
-    },
-    {
-      "funder_name": "European Union",
+      "funder_name": "European Commission",
       "award_number": "800945",
       "award_title": "Horizon 2020 Marie Sklodowska-Curie grant"
+    },
+    {
+      "funder_name": "CEA",
+      "award_title": "NUMERICS program"
     }
   ],
   "resource_type_general": "Dataset",
@@ -115,5 +121,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "d0ace309b0135ebbd09e0f224052be931a0e4ea46aed45732f527fd4a7df52e6"
+  "source_hash": "2dba7c8e29955d6bad569db17a6f57607281f5414ec8895023dc4c7f6b2f0298"
 }
