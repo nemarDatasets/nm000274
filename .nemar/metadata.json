@@ -3,7 +3,7 @@
   "pipeline_stage": "validated",
   "title": "BEETL Competition 2021 Motor Imagery Dataset B — transfer learning benchmark",
   "description": "Beetl2021-B is a preprocessed EEG dataset from the NeurIPS 2021 BEETL competition designed to benchmark transfer learning and domain adaptation algorithms for motor imagery decoding. The dataset comprises 32-channel EEG recordings from 2 subjects performing 4-class motor imagery tasks (left hand, right hand, feet, and rest) sampled at 200 Hz, with 1590 total trials organized into 4-second epochs. This resource addresses the critical challenge of cross-subject and cross-dataset generalization in brain-computer interface applications.",
-  "methods_description": "EEG data were acquired at 200 Hz sampling rate using 32 channels positioned according to the standard 1005 montage around the motor cortex. Online bandpass filtering (1-100 Hz) was applied during acquisition. Preprocessed data underwent frequency-domain bandpass filtering (1-100 Hz) and were organized into 4-second trials. Motor imagery paradigm employed visual cues for four classes. Evaluation used block-wise 5-fold cross-validation with cross-subject and cross-dataset assessment.",
+  "methods_description": "EEG data were acquired at 200 Hz sampling rate using 32 channels positioned according to the standard 1005 montage around the motor cortex. Online bandpass filtering (1-100 Hz) was applied during acquisition. Preprocessed data underwent frequency-domain bandpass filtering (1-100 Hz) and were organized into 4-second trials. Motor imagery paradigm employed visual cues for four classes. Evaluation utilized block-wise 5-fold cross-validation with cross-subject and cross-dataset assessment.",
   "license": "CC-BY-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -37,16 +37,19 @@
       "term": "motor imagery"
     },
     {
-      "term": "brain-computer interfaces"
-    },
-    {
       "term": "transfer learning"
     },
     {
       "term": "domain adaptation"
     },
     {
+      "term": "brain-computer interfaces"
+    },
+    {
       "term": "cross-dataset generalization"
+    },
+    {
+      "term": "machine learning"
     }
   ],
   "related_identifiers": [
@@ -115,5 +118,5 @@
     ".yml",
     ".zip"
   ],
-  "source_hash": "620c2ad44f9a5d188399d5cc0770666ce13493316e91d31dbb57990073cb3829"
+  "source_hash": "2b817b5b19cf8ed2820a6a934a90af987b91eeb478d5ff5cef3837da2fcd3d0d"
 }
